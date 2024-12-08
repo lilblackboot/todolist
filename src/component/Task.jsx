@@ -21,7 +21,7 @@ const Task = ({text,onDelete,onEdit}) => {
             id="check"
             className="mx-3 ml-1"
           />
-          <p style={{textDecoration: tick? 'line-through' :"none" }}>{text}</p>
+          <p style={{textDecoration: tick? 'line-through' :"none" , color: tick ? 'lightgray': 'black'}}>{text}</p>
         </div>
 
         <div>
