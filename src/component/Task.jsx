@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Task = ({text}) => {
+const Task = ({text,onDelete}) => {
 
   const [tick,setTick] = useState(false)
 
@@ -31,7 +31,7 @@ const Task = ({text}) => {
               src="https://www.pngfind.com/pngs/m/275-2755033_edit-png-file-on-phone-svg-edit-icon.png"
             ></img>
           </button>
-          <button className="bg-gray-300 px-2 mx-1 py-1 rounded-md hover:bg-red-500 ">
+          <button onClick={onDelete} className="bg-gray-300 px-2 mx-1 py-1 rounded-md hover:bg-red-500 ">
             <img
               className="w-3"
               src="https://static.thenounproject.com/png/629749-200.png"

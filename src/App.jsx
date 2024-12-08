@@ -15,6 +15,10 @@ function App() {
     console.log("updated tasks:" , tasks)
   }
 
+  const handleDelete = (indexToDelete)=>{
+    setTasks((Tasks)=>Tasks.filter((_,index)=> index !== indexToDelete))
+  }
+
   console.log(tasks)
   
   
@@ -28,7 +32,7 @@ function App() {
       
       <div className='bg-purple-100 h-50vh w-full py-1 rounded-md'>
         {tasks.map((task,index) =>(
-          <Task key={index} text = {task.text}/>
+          <Task key={index} text = {task.text} onDelete={()=>handleDelete(index)}/>
         ))}
       </div>
       
