@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-const Task = ({text,onDelete}) => {
+const Task = ({text,onDelete,onEdit}) => {
 
   const [tick,setTick] = useState(false)
 
@@ -25,7 +25,7 @@ const Task = ({text,onDelete}) => {
         </div>
 
         <div>
-          <button className="bg-gray-300 px-2 py-1 mx-1 rounded-md hover:bg-purple-500 ">
+          <button onClick={onEdit} className="bg-gray-300 px-2 py-1 mx-1 rounded-md hover:bg-purple-500 ">
             <img
               className="w-3 "
               src="https://www.pngfind.com/pngs/m/275-2755033_edit-png-file-on-phone-svg-edit-icon.png"
